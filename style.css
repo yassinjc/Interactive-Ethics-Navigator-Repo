@@ -9,9 +9,15 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+.principle-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
 .principle {
-    width: 243px;
-    height: 243px;
+    width: 200px;
+    height: 200px;
     background: var(--blue);
     border-radius: 50%;
 
@@ -27,69 +33,176 @@ body {
 }
 
 .principle-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 600;
-  text-align: center;
-  z-index: 2;
-  margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+    z-index: 2;
+    margin: 0;
 }
 
 .principle img {
-  width: 80%;
-  height: auto;
-  margin-top: 20px;
+    width: 80%;
+    height: auto;
+    margin-top: 20px;
 }
 
 .nav-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  font-size: 1rem;
-  color: white;
-  cursor: pointer;
-  z-index: 3;
-  padding: 0;
-  line-height: 1;
-  user-select: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 0.8rem;
+    color: white;
+    cursor: pointer;
+    z-index: 3;
+    padding: 0;
+    line-height: 1;
+    user-select: none;
 }
 
 .nav-button.left {
-  left: 12px;
+    left: 12px;
 }
 
 .nav-button.right {
-  right: 12px;
+    right: 12px;
 }
 
 .dots {
-  position: absolute;
-  bottom: 78px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 14px;
-  z-index: 3;
+    position: absolute;
+    bottom: 65px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 14px;
+    z-index: 3;
 }
 
 .dot {
-  width: 4.8px;
-  height: 5px;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
-  transition: background-color 0.3s;
+    width: 4.8px;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transition: background-color 0.3s;
 }
 
 .dot.active {
-  background-color: white;
+    background-color: white;
 }
+
+.info-circle {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: white;
+    border: 2px solid #2dcaff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.circle-label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.75rem;
+  font-weight: 500;
+  white-space: nowrap;
+  color: black;
+}
+
+.info-circle.right .circle-label {
+  left: 100%;
+  margin-left: 12px;
+}
+
+.info-circle.left .circle-label {
+  right: 100%;
+  margin-right: 12px;
+}
+
+.info-circle img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.info-circle:hover {
+    transform: scale(1.1);
+    background-color: #eee;
+}
+
+.info-circle:nth-child(2) {
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.info-circle:nth-child(5) img {
+  margin-left: 5px;
+}
+
+.info-circle:nth-child(3) img {
+  margin-left: 6px;
+}
+
+.info-circle:nth-child(4) img {
+  margin-top: 4px;
+}
+
+.info-circle:nth-child(3) {
+    top: 20%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+}
+
+.info-circle:nth-child(4) {
+    top: 50%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+}
+
+.info-circle:nth-child(5) {
+    top: 80%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+}
+
+.info-circle:nth-child(6) {
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.info-circle:nth-child(7) {
+    top: 80%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+}
+
+.info-circle:nth-child(8) {
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+}
+
+.info-circle:nth-child(9) {
+    top: 20%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+}
+
 
 #tsparticles {
     position: absolute;
