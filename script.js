@@ -1,48 +1,45 @@
  const options = {
         background: {
-          color: "#FFFFFF", // the canvas background color
+          color: "#FFFFFF",
         },
         interactivity: {
           events: {
             onClick: {
-              // this handles the mouse click event
               enable: true,
-              mode: "push", // this adds particles
+              mode: "push", 
             },
             onHover: {
-              // this handles the mouse hover event
               enable: true,
-              mode: "repulse", // this make particles move away from the mouse
+              mode: "repulse",
             },
           },
           modes: {
             push: {
-              quantity: 6, // number of particles to add
+              quantity: 6,
             },
             repulse: {
-              distance: 100, // the distance of the particles from the mouse
+              distance: 100, 
             },
           },
         },
         particles: {
-          color: "#00f2ff", // the canvas background color
+          color: "#00f2ff",
           links: {
-            enable: true, // this enables links between particles
+            enable: true,
             opacity: 0.3,
             distance: 200,
           },
           move: {
-            enable: true, // this makes particles move
-            speed: { min: 1, max: 3 }, // this is the speed of the particles
+            enable: true,
+            speed: { min: 0.1, max: 0.3 },
           },
           opacity: {
-            value: { min: 0.3, max: 0.7 }, // this sets the opacity of the particles
+            value: { min: 0.3, max: 0.7 },
           },
           size: {
-            value: { min: 1, max: 3 }, // this sets the size of the particles
+            value: { min: 1, max: 3 },
           },
         },
       };
 
-      // tsParticles.load has two parameters, the first one is the id of the container, the second one is an object with the options
       tsParticles.load("tsparticles", options);

@@ -1,5 +1,94 @@
-.testtext {
-    background: aliceblue;
+:root {
+    --blue: linear-gradient(180deg, #42EFFF 0%, #1B96D8 100%);
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.principle {
+    width: 243px;
+    height: 243px;
+    background: var(--blue);
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.principle-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  z-index: 2;
+  margin: 0;
+}
+
+.principle img {
+  width: 80%;
+  height: auto;
+  margin-top: 20px;
+}
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  z-index: 3;
+  padding: 0;
+  line-height: 1;
+  user-select: none;
+}
+
+.nav-button.left {
+  left: 12px;
+}
+
+.nav-button.right {
+  right: 12px;
+}
+
+.dots {
+  position: absolute;
+  bottom: 78px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 14px;
+  z-index: 3;
+}
+
+.dot {
+  width: 4.8px;
+  height: 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: white;
 }
 
 #tsparticles {
