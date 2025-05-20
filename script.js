@@ -45,14 +45,14 @@ const options = {
 tsParticles.load("tsparticles", options);
 
 
-window.addEventListener('load', () => {
+function positionCircles() {
   const circles = document.querySelectorAll('.info-circle');
   const centerCircle = document.querySelector('.principle');
   const centerRect = centerCircle.getBoundingClientRect();
   const centerX = centerRect.left + centerRect.width / 2;
   const centerY = centerRect.top + centerRect.height / 2;
   const radius = 200;
-  const circleSize = 0;
+  const circleSize = 80;
 
   circles.forEach((circle, index) => {
     let angle;
@@ -66,11 +66,15 @@ window.addEventListener('load', () => {
     const x = centerX + radius * Math.cos(angle) - circleSize / 2;
     const y = centerY + radius * Math.sin(angle) - circleSize / 2;
 
-    circle.style.position = 'absolute';
     circle.style.left = `${x}px`;
     circle.style.top = `${y}px`;
+    circle.style.position = 'absolute';
   });
-});
+}
+
+window.addEventListener('load', positionCircles);
+window.addEventListener('resize', positionCircles);
+
 
 
 
