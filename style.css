@@ -12,8 +12,8 @@ body {
 
 .principle-container {
     position: relative;
-    width: 100vw;
-    height: 100vh;
+    width: 85vw;
+    height: 72vh;
 }
 
 .principle {
@@ -200,4 +200,15 @@ body {
 #tsparticles {
     position: absolute;
     z-index: -1;
+}
+
+.appear {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.appear.visible {
+  opacity: 1;
+  transform: scale(1);
 }

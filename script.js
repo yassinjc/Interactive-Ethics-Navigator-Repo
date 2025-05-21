@@ -78,3 +78,12 @@ window.addEventListener('resize', positionCircles);
 
 
 
+window.addEventListener('load', () => {
+  const items = document.querySelectorAll('.appear');
+  
+  items.forEach((el, i) => {
+    setTimeout(() => {
+      el.classList.add('visible');
+    }, i * 150);
+  });
+});
