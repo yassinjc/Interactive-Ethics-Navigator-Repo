@@ -317,8 +317,9 @@ body {
 .info-circle.active {
   pointer-events: none;
   z-index: 10;
-  transform: translateX(150px);
+  transform: translateX(225px);
   background: var(--blue);
   border: none !important;
   transition: transform 0.5s ease, background-color 0.4s ease, border 0.4s ease;
 }
+

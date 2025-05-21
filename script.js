@@ -1,3 +1,15 @@
+const infoContent = {
+  Definition: "De definitie beschrijft wat dit principe inhoudt en waarom het belangrijk is in ICT-onderzoek.",
+  Transparency: "Transparantie betekent dat processen, beslissingen en data begrijpelijk zijn voor betrokkenen.",
+  Justice: "Gelijkheid en eerlijkheid in toegang, behandeling en besluitvorming binnen technologie.",
+  Privacy: "Bescherming van persoonlijke gegevens en respect voor gebruikersinformatie.",
+  Accountability: "Verantwoordelijkheid nemen voor de gevolgen van technologische beslissingen.",
+  Autonomy: "Mensen moeten zelf keuzes kunnen maken zonder onnodige beïnvloeding door technologie.",
+  Beneficence: "Streven naar het maximaliseren van voordelen en het minimaliseren van schade.",
+  Nonmaleficence: "Voorkomen van schade bij het ontwerpen en inzetten van ICT-systemen."
+};
+
+
 tsParticles.load("tsparticles", {
   background: { color: "#FFFFFF" },
   interactivity: {
@@ -74,13 +86,28 @@ document.querySelectorAll('.info-circle').forEach(circle => {
     });
     document.querySelector('.principle')?.classList.add('hidden');
 
+    const label = circle.querySelector('.circle-label');
+    if (label) label.style.display = 'none';
+
     setTimeout(() => {
       circle.classList.add('active');
       infoPanel.classList.add('visible');
 
       document.querySelectorAll('.circle-title').forEach(t => t.textContent = '');
-      document.getElementById('info-title').textContent = circle.dataset.info;
-      document.getElementById('info-text').textContent = `Test info over "${circle.dataset.info}".`;
+      const key = circle.dataset.info;
+      const entry = document.querySelector(`.info-entry[data-info="${key}"]`);
+      if (entry) {
+        const h2 = entry.querySelector('h2');
+        document.getElementById('info-title').innerHTML = h2 ? h2.innerHTML : key;
+
+        const clone = entry.cloneNode(true);
+        const h2ToRemove = clone.querySelector('h2');
+        if (h2ToRemove) h2ToRemove.remove();
+        document.getElementById('info-text').innerHTML = clone.innerHTML;
+      }
+
+
+
 
       const titleEl = circle.querySelector('.circle-title');
       if (titleEl) titleEl.textContent = circle.dataset.info;
