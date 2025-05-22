@@ -116,6 +116,9 @@ document.querySelectorAll('.info-circle').forEach(circle => {
       if (returnButton) {
         returnButton.addEventListener('click', (e) => {
           e.stopPropagation();
+          const label = circle.querySelector('.circle-label');
+          if (label) label.style.display = 'block';
+
           mainView.style.transform = 'translate(0, 0) scale(1)';
           overlay.classList.remove('visible');
           infoPanel.classList.remove('visible');
