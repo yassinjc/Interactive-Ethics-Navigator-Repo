@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
   <title>Interactive Ethics Navigator</title>
 </head>
 
@@ -58,10 +59,13 @@
         <img src="icons/real-life-ex-ico-white.svg" class="icon icon-hover" alt="Real-Life Examples" />
         <span class="circle-label">Real-Life Examples</span>
       </div>
-      <div class="info-circle left appear" data-index="7">
+      <div class="info-circle left appear why-circle" data-info="Why It Matters">
         <img src="icons/why-it-matters-ico.svg" class="icon icon-default" alt="Why It Matters" />
         <img src="icons/why-it-matters-ico-white.svg" class="icon icon-hover" alt="Why It Matters" />
         <span class="circle-label">Why It Matters</span>
+        <span class="circle-title"></span>
+        <button class="circle-return">
+          < RETURN</button>
       </div>
       <div class="info-circle left appear" data-info="Definition">
         <img src="icons/definition-ico.svg" class="icon icon-default" alt="Definition" />
@@ -110,13 +114,57 @@
         </ul>
         <img id="definition-illu" src="images/definition-illu.png" alt="">
         <ul id="choice-list">
-          <p>When someone participates in a project or uses a digital product, they should always have <strong>a real choice</strong>:</p>
+          <p>When someone participates in a project or uses a digital product, they should always have <strong>a real
+              choice</strong>:</p>
           <li>Do I want to <strong>share this data?</strong></li>
           <li>Do I <strong>understand how it will be used</strong>?</li>
-          <li>Can I <strong>say “no”</strong> without <strong>pressure</strong> or <strong>negative consequences</strong>?</li>
+          <li>Can I <strong>say “no”</strong> without <strong>pressure</strong> or <strong>negative
+              consequences</strong>?</li>
         </ul>
       </div>
     </div>
+
+
+    <div class="info-entry" data-info="Why It Matters">
+      <h2>Why Autonomy Matters</h2>
+
+
+      <div class="info-grid">
+        <ul id="respect-list">
+          <p>Respecting autonomy is <strong>not just a rule</strong> — it’s about <strong>treating people with
+              respect.</strong></p>
+          <p>When people <strong>understand what’s happening</strong> and get to make <strong>their own
+              decisions</strong>, they feel:</p>
+          <ul id="respect-items">
+            <li>more <strong>comfortable</strong></li>
+            <li>more <strong>in control</strong></li>
+            <li>and more <strong>willing to participate</strong></li>
+          </ul>
+        </ul>
+
+
+        <ul id="ignore-list">
+          <p>Real impact of <strong>ignoring autonomy:</strong></p>
+          <ul>
+            <li>A participant may <strong>drop out</strong> of your study.</li>
+            <li>A user may <strong>stop using your product.</strong></li>
+            <li>Someone might <strong>file a complaint</strong> or <strong> report your
+                project.</strong></li>
+          </ul>
+          <p>Small ethical mistakes can lead to <strong>bigger consequences</strong> than you might expect.</p>
+        </ul>
+
+
+
+      </div>
+
+
+      <div class="why-bottom">
+        <img src="images/matters-flowchart.png" alt="Flowchart">
+      </div>
+    </div>
+
+
 
     <div class="info-entry" data-info="Transparency">
       <h2>Transparency</h2>
@@ -126,6 +174,7 @@
 
 
   <div id="tsparticles"></div>
+
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/tsparticles-slim@2.0.6/tsparticles.slim.bundle.min.js"></script>
