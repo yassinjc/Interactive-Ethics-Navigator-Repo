@@ -1,15 +1,3 @@
-const infoContent = {
-  Definition: "De definitie beschrijft wat dit principe inhoudt en waarom het belangrijk is in ICT-onderzoek.",
-  Transparency: "Transparantie betekent dat processen, beslissingen en data begrijpelijk zijn voor betrokkenen.",
-  Justice: "Gelijkheid en eerlijkheid in toegang, behandeling en besluitvorming binnen technologie.",
-  Privacy: "Bescherming van persoonlijke gegevens en respect voor gebruikersinformatie.",
-  Accountability: "Verantwoordelijkheid nemen voor de gevolgen van technologische beslissingen.",
-  Autonomy: "Mensen moeten zelf keuzes kunnen maken zonder onnodige beïnvloeding door technologie.",
-  Beneficence: "Streven naar het maximaliseren van voordelen en het minimaliseren van schade.",
-  Nonmaleficence: "Voorkomen van schade bij het ontwerpen en inzetten van ICT-systemen."
-};
-
-
 tsParticles.load("tsparticles", {
   background: { color: "#FFFFFF" },
   interactivity: {
