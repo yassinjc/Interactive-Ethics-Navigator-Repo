@@ -81,6 +81,8 @@ document.querySelectorAll('.info-circle').forEach(circle => {
       circle.classList.add('active');
       infoPanel.classList.add('visible');
 
+
+
       document.querySelectorAll('.circle-title').forEach(t => t.textContent = '');
       const key = circle.dataset.info;
       const entry = document.querySelector(`.info-entry[data-info="${key}"]`);
@@ -92,10 +94,11 @@ document.querySelectorAll('.info-circle').forEach(circle => {
         const h2ToRemove = clone.querySelector('h2');
         if (h2ToRemove) h2ToRemove.remove();
         document.getElementById('info-text').innerHTML = clone.innerHTML;
+
+        if (circle.dataset.info === "Real-Life Examples") {
+          initExampleSlider();
+        }
       }
-
-
-
 
       const titleEl = circle.querySelector('.circle-title');
       if (titleEl) titleEl.textContent = circle.dataset.info;
@@ -123,3 +126,41 @@ document.querySelectorAll('.info-circle').forEach(circle => {
     }, 800);
   });
 });
+
+
+
+function initExampleSlider() {
+  const slider = document.querySelector('.examples-slider');
+  if (!slider) return;
+
+  const slides = slider.querySelectorAll('.example-slide');
+  const nextBtn = slider.querySelector('.next');
+  const prevBtn = slider.querySelector('.prev');
+  let current = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+    });
+
+    if (prevBtn) prevBtn.classList.toggle('hidden', index === 0);
+    if (nextBtn) nextBtn.classList.toggle('hidden', index === slides.length - 1);
+  }
+
+  nextBtn?.addEventListener('click', () => {
+    if (current < slides.length - 1) {
+      current++;
+      showSlide(current);
+    }
+  });
+
+  prevBtn?.addEventListener('click', () => {
+    if (current > 0) {
+      current--;
+      showSlide(current);
+    }
+  });
+
+  showSlide(current);
+}
+

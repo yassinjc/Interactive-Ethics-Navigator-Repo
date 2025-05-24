@@ -245,7 +245,7 @@ body {
 #info-panel {
     position: absolute;
     left: 10%;
-    top: 45%;
+    top: 44%;
     transform: translateY(-50%);
     opacity: 0;
     padding: 2rem;
@@ -289,6 +289,10 @@ body {
 }
 
 .why-circle .circle-title {
+    font-size: 0.5rem;
+}
+
+.real-examples .circle-title {
     font-size: 0.5rem;
 }
 
@@ -490,7 +494,7 @@ body {
 
 #respect-list {
     margin-left: -3rem;
-    margin-top: 0rem;
+    margin-top: -0.2rem;
 }
 
 #respect-items {
@@ -500,7 +504,7 @@ body {
 
 #ignore-list {
     margin-left: -3.5rem;
-    margin-top: 0rem;
+    margin-top: -0.2rem;
 }
 
 #ignore-list li {
@@ -518,14 +522,174 @@ body {
 }
 
 .why-bottom {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 7rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 7rem;
 }
 
 .why-bottom img {
-  width: 100%;
-  object-fit: contain;
-  margin-top: 2rem;
-  margin-left: -5rem;
+    width: 100%;
+    object-fit: contain;
+    margin-top: 2rem;
+    margin-left: -5rem;
+}
+
+.examples-slider {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 2rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.example-slide {
+    display: none;
+    animation: fadeIn 0.4s ease;
+}
+
+.example-slide.active {
+    display: block;
+}
+
+.example-nav {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10;
+    padding: 0;
+    pointer-events: auto;
+}
+
+.example-nav img {
+  width: 28px;
+  height: 28px;
+  transition: opacity 0.3s ease;
+}
+
+.example-nav.prev {
+    left: -3rem;
+}
+
+.example-nav.next {
+    right: -3rem;
+}
+
+.example-nav.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.real-example-content.stacked {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.real-example-content.stacked h3 {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.example-top {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    width: 50rem;
+    align-items: flex-start;
+    margin-left: -6rem;
+    margin-bottom: -3rem;
+    margin-top: -3rem;
+}
+
+.example-img {
+    width: 400px;
+    height: auto;
+    margin-right: -2rem;
+}
+
+.example-img2 {
+    width: 390px;
+    height: auto;
+    margin-right: -2rem;
+    margin-top: -0.5rem;
+}
+
+.approach-heading {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+}
+
+.subtext {
+    font-size: 0.75rem;
+    display: block;
+    margin-top: -2px;
+}
+
+.result-box.below {
+    border: 1px solid;
+    border-color: #71d2ff;
+    background: rgba(113, 210, 255, 0.25);
+    border-radius: 12px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    width: 25rem;
+    height: 13rem;
+    margin-left: 7rem;
+    margin-bottom: 4rem;
+}
+
+.result-box-bram.below {
+    border: 1px solid;
+    border-color: #71d2ff;
+    background: rgba(113, 210, 255, 0.25);
+    border-radius: 12px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    width: 27rem;
+    height: 15.2rem;
+    margin-left: 7rem;
+    margin-bottom: 4rem;
+    margin-top: -0.8rem;
+}
+
+.result-box-bram.below ul {
+    padding-left: 1.2rem;
+    margin: 0;
+}
+
+.result-box-bram.below li {
+    margin-bottom: 0.6rem;
+    list-style: outside;
+}
+
+.result-box.below ul {
+    padding-left: 1.2rem;
+    margin: 0;
+}
+
+.result-box.below li {
+    margin-bottom: 0.6rem;
+    list-style: outside;
 }
